@@ -5,6 +5,9 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build:client": "vue-cli-service build --dest dist/client",
+    "build:server": "VUE_APP_SSR=true vue-cli-service build --dest dist/server",
+    "build:ssr": "rm -rf ./dist && npm run build:client && npm run build:server && node was/server.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
